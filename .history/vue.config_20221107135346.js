@@ -29,7 +29,7 @@ const htmls = getEntry('./src/views/**/*.')
 // console.log(htmls);
 module.exports = {
   pages: htmls,
-  publicPath: process.env.NODE_ENV=='development'?'./':'/dist',
+  publicPath: process.env.NODE_ENV=='development'?'./':'/dist/pc',
   outputDir: './dist', // 打包后的文件夹名称，默认dist
   css:{
 
