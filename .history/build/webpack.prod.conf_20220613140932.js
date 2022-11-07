@@ -120,64 +120,64 @@ const webpackConfig = merge(baseWebpackConfig, {
           to: config.build.assetsSubDirectory,
           ignore: ['.*']
         },
-        // {
-        //   from: path.resolve(__dirname, '../z-index'),
-        //   to: "z-index",
-        //   ignore: ['.*'],
-        //   transform(content, path){
-        //     var fileSuffix = path.substring(path.lastIndexOf(".")+1)
-        //     if (fileSuffix == "html"){
-        //       return copyOptimize(content.toString(),[
-        //         {
-        //           match: /.\/css/g,
-        //           replace: `/print/z-index/css`
-        //         },
-        //         {
-        //           match: /.\/js/g,
-        //           replace: `/print/z-index/js`
-        //         },
-        //         {
-        //           match: /.\/img/g,
-        //           replace: `/print/z-index/img`
-        //         }
-        //       ])
-        //     }
-        //     return content;
-        //   }
-        // },
-        // {
-        //   from: path.resolve(__dirname, '../map'),
-        //   to: "map",
-        //   ignore: ['.*'],
-        //   transform(content, path){
-        //     var fileSuffix = path.substring(path.lastIndexOf(".")+1)
-        //     if (fileSuffix == "html"){
-        //       return copyOptimize(content.toString(),[
-        //         {
-        //           match: /{css_replace}/g,
-        //           replace: `/print/map/css`
-        //         },
-        //         {
-        //           match: /{js_replace}/g,
-        //           replace: `/print/map/js`
-        //         },
-        //         {
-        //           match: /{img_replace}/g,
-        //           replace: `/print/map/img`
-        //         }
-        //       ])
-        //     }
-        //     if (fileSuffix == "js"){
-        //       return copyOptimize(content.toString(),[
-        //         {
-        //           match: /..\/img/g,
-        //           replace: `/print/map/img`
-        //         }
-        //       ])
-        //     }
-        //     return content;
-        //   }
-        // },
+        {
+          from: path.resolve(__dirname, '../z-index'),
+          to: "z-index",
+          ignore: ['.*'],
+          transform(content, path){
+            var fileSuffix = path.substring(path.lastIndexOf(".")+1)
+            if (fileSuffix == "html"){
+              return copyOptimize(content.toString(),[
+                {
+                  match: /.\/css/g,
+                  replace: `/print/z-index/css`
+                },
+                {
+                  match: /.\/js/g,
+                  replace: `/print/z-index/js`
+                },
+                {
+                  match: /.\/img/g,
+                  replace: `/print/z-index/img`
+                }
+              ])
+            }
+            return content;
+          }
+        },
+        {
+          from: path.resolve(__dirname, '../map'),
+          to: "map",
+          ignore: ['.*'],
+          transform(content, path){
+            var fileSuffix = path.substring(path.lastIndexOf(".")+1)
+            if (fileSuffix == "html"){
+              return copyOptimize(content.toString(),[
+                {
+                  match: /{css_replace}/g,
+                  replace: `/print/map/css`
+                },
+                {
+                  match: /{js_replace}/g,
+                  replace: `/print/map/js`
+                },
+                {
+                  match: /{img_replace}/g,
+                  replace: `/print/map/img`
+                }
+              ])
+            }
+            if (fileSuffix == "js"){
+              return copyOptimize(content.toString(),[
+                {
+                  match: /..\/img/g,
+                  replace: `/print/map/img`
+                }
+              ])
+            }
+            return content;
+          }
+        },
       ])
   ]
 })
