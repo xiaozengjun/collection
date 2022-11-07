@@ -125,11 +125,7 @@ export default {
             window.open('https://www.baidu.com/s?wd=' + this.baiduData)
         },
         jump(index) {
-            window.scrollTo({
-                top:this.heightData[index][0],
-                left:0,
-                behavior: "smooth"
-            });
+
         }
     },
 };
