@@ -33,6 +33,8 @@ function humpToLine(name) {
 // 设置动态标题
 const title = {
   'index': '首页',
+  'login': '登录',
+  'demo': '演示'
 }
 let routerS = function() {
   let routes = [

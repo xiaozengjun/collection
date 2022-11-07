@@ -2,10 +2,10 @@
 <template>
     <el-container>
         <el-header height="100px">
-            <h3>技术一部自我提升</h3>
+            <h3>技术一部摸鱼网</h3>
             <div class="baidu">
                 <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
-                <el-input v-model="baiduData"></el-input><el-button @click="baidu">百度一下</el-button>
+                <el-input v-model="baiduData"></el-input><el-button>百度一下</el-button>
             </div>
         </el-header>
         <el-container class="main_s">
@@ -121,12 +121,7 @@ export default {
                 console.log(this.activeIndex)
             }
         })
-    },
-    methods: {
-        baidu() {
-            window.open('https://www.baidu.com/s?wd=' + this.baiduData)
-        }
-    },
+    }
 };
 </script>
 
