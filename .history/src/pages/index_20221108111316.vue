@@ -156,6 +156,7 @@ export default {
             }
         })
         this.rhesis()
+        this.screenWidth()
     }, 
     mounted() {
         this.$nextTick(function () {
@@ -176,7 +177,7 @@ export default {
                     }
                 }
             }
-            this.screenWidth()
+
             window.onresize = ()=> {
                 this.screenWidth()
             }
