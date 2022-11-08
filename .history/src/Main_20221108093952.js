@@ -3,6 +3,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './Router'
 import less from 'less'
+import store from './store';
 import 'element-ui/lib/theme-chalk/base.css';
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';  //Element 内置动画
 import {
@@ -14,7 +15,11 @@ import {
   Input,
   Option,
   Message,
+  Popover,
+  Empty,
+  Popconfirm,
   Menu,
+  Submenu,
   MenuItem,
   Aside,
   Card,
@@ -30,6 +35,7 @@ Vue.use(Button)
     .use(Menu)
     .use(Card)
     .use(Aside)
+    .use(Submenu)
     .use(MenuItem)
     .use(MenuItemGroup)
     .use(Container)
@@ -39,6 +45,12 @@ Vue.use(Button)
     .use(Input)
     .use(Message)
     .use(Option)
+    .use(Empty)
+    .use(Dialog)
+    .use(Popover)
+    .use(Popconfirm)
+    .use(Tooltip)
+    .use(Radio)
 Vue.component(CollapseTransition.name, CollapseTransition)
 
 
@@ -47,6 +59,7 @@ new Vue({
   el: '#app',
   router,
   less,
+  store,
   components: { App },
   template: '<App/>'
 })

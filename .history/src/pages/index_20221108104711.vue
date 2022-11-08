@@ -196,9 +196,6 @@ export default {
         },
         async rhesis() {
             let data =  await hitokoto()
-            this.title = data.hitokoto || "当然是你最重要了，不说了，游戏开了!!",
-            this.name = data.from_who || '小曾',
-            this.Abstract = data.from || '谁重要',
             console.log(data)
         },
         screenWidth() {

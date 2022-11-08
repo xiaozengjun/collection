@@ -3,6 +3,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './Router'
 import less from 'less'
+import store from './store';
 import 'element-ui/lib/theme-chalk/base.css';
 import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';  //Element 内置动画
 import {
@@ -14,7 +15,11 @@ import {
   Input,
   Option,
   Message,
+  Popover,
+  Empty,
+  Popconfirm,
   Menu,
+  Submenu,
   MenuItem,
   Aside,
   Card,
@@ -29,7 +34,7 @@ Message.install = function (Vue, options) {
 Vue.use(Button)
     .use(Menu)
     .use(Card)
-    .use(Aside)
+    .use(Submenu)
     .use(MenuItem)
     .use(MenuItemGroup)
     .use(Container)
@@ -47,6 +52,7 @@ new Vue({
   el: '#app',
   router,
   less,
+  store,
   components: { App },
   template: '<App/>'
 })

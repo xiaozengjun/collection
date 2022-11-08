@@ -196,9 +196,6 @@ export default {
         },
         async rhesis() {
             let data =  await hitokoto()
-            this.title = data.hitokoto || "当然是你最重要了，不说了，游戏开了!!",
-            this.name = data.from_who || '小曾',
-            this.Abstract = data.from || '谁重要',
             console.log(data)
         },
         screenWidth() {
@@ -341,10 +338,7 @@ a:hover {
         width: 100%;
     }
     /deep/.el-card__body {
-        padding: 15px;
-    }
-    /deep/.el-card {
-        margin-bottom: 10px;
+        padding: 20px;
     }
 }
 @media (max-width: 1480px) {
