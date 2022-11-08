@@ -2,7 +2,7 @@
 <template>
     <el-container>
         <el-header height="100px">
-            <h3>小曾网站收集, 自我提升</h3>
+            <h3>网站收集, 自我提升</h3>
             <div class="baidu">
                 <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
                 <el-input v-model="baiduData"></el-input><el-button @click="baidu">百度一下</el-button>
